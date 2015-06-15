@@ -42,4 +42,4 @@ stream = twitter_stream.statuses.filter(track=QUERY)
 with io.open(OUT_FILE, 'a', encoding='utf-8',buffering=1) as f:
     for tweet in stream:
         f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
-        #print tweet['text']
+        print tweet['text']
